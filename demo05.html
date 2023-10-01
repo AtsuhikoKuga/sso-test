@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+	$360 = $.noConflict(true);
+	//共通パーツ読み込み
+	  $360(function() {
+	  	   $360("#header").load("header.html");
+	       $360("#navi").load("navi.html");
+	       $360("#footer").load("footer.html");
+	       $360("#jquery_height").load("jquery_height.html");
+	});
+	</script>
+    <title>tebraNaviデモ環境</title>
+
+    <!--Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--Font Awesome5-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css">
+
+    <!--自作CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body class="d-flex flex-column">
+
+<!-- Header -->
+<div id="header"></div>
+
+<!-- Navigation -->
+<div id="navi"></div>
+
+<!--iframe Start-->
+<iframe 
+	scrolling="no" 
+	width="auto" 
+	frameborder="0" 
+	style="border:0;" 
+	allowfullscreen 
+	src="https://ap-northeast-1.quicksight.aws.amazon.com/sn/embed/share/accounts/173404827629/dashboards/8b723dbb-529c-425f-b3b7-64395d0fefae?directory_alias=perspective-tebra">
+</iframe>
+<!--iframe End-->
+
+<!-- Footer -->
+<div id="footer"></div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<!-- jquery_height -->
+<div id="jquery_height"></div>
+</html>

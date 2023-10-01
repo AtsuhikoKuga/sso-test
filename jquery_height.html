@@ -1,0 +1,19 @@
+<!-- Optional JavaScript -->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script>
+// 画面サイズによってiframeの高さを変える
+$(window).on('load resize', function(){
+  var wid = $(window).width();
+  if (wid >= 1900) {
+    $('iframe').css('height','812px');
+    $('.g-menu').css('width','1150px');
+  } else if (wid >= 800) {
+    $('iframe').css('height','532px');
+    $('.nav-item').css('width','200px');
+    $('.g-menu').css('width','900px');
+  } else {
+  	$('iframe').css('height','180px');
+  }
+});
+</script>

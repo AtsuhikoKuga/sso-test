@@ -1,0 +1,112 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding:0">
+      <div class="container g-menu">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown navi1">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-chart-bar"></i> Overview</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="demo01.html">Overview TOP Page</a>
+                <a class="dropdown-item disabled" href="#">実消化サマリ</a>
+                <a class="dropdown-item disabled" href="#">月次実消化推移</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown navi2">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-capsules"></i> Brand</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown02">
+                <a class="dropdown-item" href="demo02.html">Brand TOP Page</a>
+                <a class="dropdown-item" href="demo02_01.html">ブランド別市場シェア</a>
+                <a class="dropdown-item disabled" href="#">チャンネル別ターゲットカバー状況</a>
+                <a class="dropdown-item disabled" href="#">MRアクティビティサマリ</a>
+                <a class="dropdown-item disabled" href="#">オウンドメディアサマリ</a>
+                <a class="dropdown-item disabled" href="#">メールレポート</a>
+                <a class="dropdown-item disabled" href="#">コンテンツ別メールレポート</a>
+                <a class="dropdown-item" href="demo02_07.html">Webinarレポート</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown navi3">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-map-pin"></i> Territory</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown03">
+                <a class="dropdown-item" href="demo03.html">Territory TOP Page</a>
+                <a class="dropdown-item disabled" href="#">支店別実消化実績(支店別の累計/月次進捗確認)</a>
+                <a class="dropdown-item disabled" href="demo03_02.html">支店別実消化実績(支店別実績)</a>
+                <a class="dropdown-item disabled" href="#">担当者別実消化実績</a>
+                <a class="dropdown-item" href="demo03_04.html">施設別実消化実績</a>
+                <a class="dropdown-item" href="demo03_05.html">納入明細</a>
+                <a class="dropdown-item disabled" href="#">エリア別市場シェア</a>
+                <a class="dropdown-item disabled" href="#">医師別ターゲットカバー状況</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown navi4">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-hospital"></i> Account</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="demo04.html">施設一覧</a>
+                <a class="dropdown-item disabled" href="#">施設プロファイル</a>
+                <a class="dropdown-item disabled" href="#">施設タイムライン</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown navi5">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-md"></i> Customer</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown05">
+                <a class="dropdown-item" href="demo05.html">顧客一覧</a>
+                <a class="dropdown-item disabled" href="#">コールレポート</a>
+                <a class="dropdown-item disabled" href="#">医師プロファイル</a>
+                <a class="dropdown-item disabled" href="#">医師タイムライン</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+</nav>
+<!-- / Navigation -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script>
+// メニューをアクティブにする
+href = location.href;
+
+var links = jQuery(".nav-item > a");
+
+links.each(function (index, value) {
+  if (value.href == href) {
+    jQuery(".nav-item").eq(index).addClass("active");
+    console.log(href);
+    console.log(value.href);
+  }
+});
+
+// ドロップダウンメニュー対策(Overview)
+if("https://d17gxs15iiqep7.cloudfront.net/demo01.html"==href){
+	jQuery(".navi1").addClass("active");
+	//alert('成功');
+}
+
+// ドロップダウンメニュー対策(Brand)
+if("https://d17gxs15iiqep7.cloudfront.net/demo02.html"==href || "https://d17gxs15iiqep7.cloudfront.net/demo02_07.html"==href || "https://d17gxs15iiqep7.cloudfront.net/demo02_01.html"==href){
+	jQuery(".navi2").addClass("active");
+	//alert('成功');
+}
+
+// ドロップダウンメニュー対策(Territory)
+if("https://d17gxs15iiqep7.cloudfront.net/demo03.html"==href || "https://d17gxs15iiqep7.cloudfront.net/demo03_02.html"==href || "https://d17gxs15iiqep7.cloudfront.net/demo03_04.html"==href || "https://d17gxs15iiqep7.cloudfront.net/demo03_05.html"==href){
+	jQuery(".navi3").addClass("active");
+	//alert('成功');
+}
+
+// ドロップダウンメニュー対策(Acount)
+if("https://d17gxs15iiqep7.cloudfront.net/demo04.html"==href){
+	jQuery(".navi4").addClass("active");
+	//alert('成功');
+}
+
+// ドロップダウンメニュー対策(Customer)
+if("https://d17gxs15iiqep7.cloudfront.net/demo05.html"==href){
+	jQuery(".navi5").addClass("active");
+	//alert('成功');
+}
+
+</script>
