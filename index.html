@@ -1,1 +1,63 @@
-<iframe title="In-Market" width="1140" height="541.25" src="https://app.powerbi.com/links/8Vo6f771m5?ctid=76f9d880-0b1e-45bc-8cf4-51b27ffc82d0&pbi_source=linkShare" frameborder="0" allowFullScreen="true"></iframe><br />
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+	$360 = $.noConflict(true);
+	//共通パーツ読み込み
+	  $360(function() {
+	  	   $360("#header").load("header.html");
+	       $360("#navi").load("navi.html");
+	       $360("#footer").load("footer.html");
+	       $360("#jquery_height").load("jquery_height.html");
+	});
+	</script>
+    <title>tebraNaviデモ環境</title>
+
+    <!--Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--Font Awesome5-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css">
+
+    <!--自作CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body class="d-flex flex-column">
+
+<!-- Header -->
+<div id="header"></div>
+
+<!-- Navigation -->
+<div id="navi"></div>
+
+<!--iframe Start-->
+<!--
+<iframe title="実消化" width="1140" height="541.25" src="https://app.powerbi.com/links/8Vo6f771m5?ctid=76f9d880-0b1e-45bc-8cf4-51b27ffc82d0&pbi_source=linkShare" frameborder="0" allowFullScreen="true"></iframe>
+-->
+
+<iframe title="実消化"
+	scrolling="no" 
+	width="auto" 
+	frameborder="0" 
+	style="border:0;" 
+	allowfullscreen 
+	src="https://app.powerbi.com/reportEmbed?reportId=8c112501-b3b2-4563-baf5-35c6b1e4d94a&appId=580b9545-e904-4418-b0de-1ce53e0eb027&autoAuth=true&ctid=6d7d03fc-48c0-4c3f-8007-6c43d9a7caf6">
+
+</iframe>
+<!--iframe End-->
+
+<!-- Footer -->
+<div id="footer"></div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<!-- jquery_height -->
+<div id="jquery_height"></div>
+</html>
